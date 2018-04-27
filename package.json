@@ -1,0 +1,38 @@
+{
+  "name": "pahu-vlku",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "animejs": "^2.2.0",
+    "browser-sync": "^2.23.6",
+    "express": "^4.16.3",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-minify": "^2.1.0",
+    "gulp-sass": "^4.0.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0",
+    "gulp-wait": "0.0.2",
+    "jquery": "^3.3.1",
+    "reset-css": "^3.0.0",
+    "run-sequence": "^2.2.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "gulp prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VladislavRUS/pahu.git"
+  },
+  "author": "Vladislav Kurochkin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VladislavRUS/pahu/issues"
+  },
+  "homepage": "https://github.com/VladislavRUS/pahu#readme"
+}

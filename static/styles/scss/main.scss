@@ -1,0 +1,9 @@
+@import '../../../node_modules/reset-css/_reset';
+
+@import 'common/body';
+@import 'common/fonts';
+@import 'common/variables';
+@import 'common/images';
+
+@import 'blocks/header/header';
+@import 'blocks/home/home';

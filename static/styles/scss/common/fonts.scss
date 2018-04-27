@@ -1,0 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+@mixin poppins($weight: 400) {
+    font-family: 'Poppins', sans-serif;
+    font-weight: $weight;
+}
