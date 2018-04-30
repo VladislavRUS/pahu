@@ -1,0 +1,146 @@
+.features {
+    padding-top: 92px;
+    padding-bottom: 150px;
+    background-color: #181817;
+
+    &__wrapper {
+        margin: 0 auto;
+        max-width: $page-width;
+    }
+
+    &__title {
+        margin-bottom: 120px;
+        position: relative;
+    }
+
+    &__content {
+        display: flex;
+    }
+
+    &__image {
+        width: 420px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+}
+
+.title {
+    padding-bottom: 20px;
+    margin: 0 auto;
+    max-width: 40%;
+    text-align: center;
+    @include poppins(500);
+    color: #ffce76;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+    &::before {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -10px;
+        content: "";
+        width: 40px;
+        height: 20px;
+        background-color: #181817;
+    }
+
+    &::after {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%) rotate(45deg);
+        bottom: -5px;
+        content: "";
+        width: 10px;
+        height: 10px;
+        background-color: #ffce76;
+    }
+}
+
+.feature {
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+
+    &._reverse {
+        flex-direction: row-reverse;
+    }
+
+    &._reverse &__icon {
+        margin-right: 32px;
+    }
+
+    &:hover &__icon {
+        transform: rotate(360deg);
+    }
+
+    &__info {
+        margin-right: 28px;
+        display: flex;
+        flex-direction: column;
+
+        &._align-right &-title {
+            text-align: right;
+        }
+
+        &._align-right &-description {
+            text-align: right;
+        }
+
+        &._align-left &-title {
+            text-align: left;
+        }
+
+        &._align-left &-description {
+            text-align: left;
+        }
+
+        &-title {
+            margin-bottom: 23px;
+            @include poppins(500);
+            color: #ffce76;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 15px;
+        }
+
+        &-description {
+            @include poppins(400);
+            color: #fff;
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+
+    &__icon {
+        flex-shrink: 0;
+        transition: transform .5s ease;
+        
+        &._modern-design {
+            width: 68px;
+            height: 71px;
+        }
+
+        &._unique-quality {
+            position: relative;
+            width: 97px;
+            height: 68px;
+        }
+
+        &._honest-prices {
+            width: 67px;
+            height: 81px;
+        }
+
+        &._great-support {
+            width: 67px;
+            height: 81px;
+        }
+    }
+}

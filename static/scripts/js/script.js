@@ -1,4 +1,45 @@
 $(document).ready(function () {
+    var prevOffset = 0;
+    var prevOffsetDiff = 0;
+
+    $(window).bind('scroll', function () {
+        var offsetDiff = prevOffset - window.pageYOffset;
+        var offsetDiffSign = Math.sign(offsetDiff);
+        var prevOffsetDiffSign = Math.sign(prevOffsetDiff);
+
+        if (offsetDiffSign !== prevOffsetDiffSign) {
+            var translateY;
+
+            if (offsetDiffSign > 0) {
+                translateY = 0;
+
+            } else {
+                translateY = '-100%';
+            }
+
+            anime({
+                targets: '.header',
+                translateY: translateY,
+                easing: 'easeInOutSine',
+                duration: 200
+            });
+        }
+
+        prevOffset = window.pageYOffset;
+        prevOffsetDiff = offsetDiff;
+    });
+
+    anime({
+        targets: '.squares__row-item',
+        translateX: 50,
+        direction: 'alternate',
+        delay: function (el, i, l) {
+            return i * 100;
+        },
+        easing: 'easeInExpo',
+        duration: 500,
+        loop: true
+    });
 
     if ($(window).width() >= 1200) {
 

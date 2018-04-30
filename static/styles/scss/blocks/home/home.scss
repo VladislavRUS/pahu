@@ -1,3 +1,111 @@
 .home {
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+    background-image: url('/assets/images/home/bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &__overlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+
+        & svg {
+            width: 100%;
+            height: 100%;
+
+            & rect {
+                width: 100%;
+                height: 100%;
+                fill: transparent;
+            }
+        }
+    }
+
+    &__wrapper {
+        padding-top: 100px;
+        position: relative;
+        margin: 0 auto;
+        max-width: $page-width;
+        display: flex;
+        align-items: center;
+        z-index: 2;
+    }
+
+    &__welcome {
+        max-width: 45%;
+    }
+
+    &__squares {
+        margin-left: auto;
+        max-width: 55%;
+    }
 }
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &__title {
+        margin-bottom: 57px;
+        display: flex;
+        align-items: center;
+
+        &-line {
+            margin-right: 20px;
+            width: 63px;
+            height: 5px;
+            background-color: #fece76;
+        }
+
+        &-text {
+            @include poppins(400);
+            font-size: 25px;
+            color: #fff;
+
+            & ._accent {
+                @include poppins(400);
+                font-weight: 600;
+                color: #fece76;
+            }
+        }
+    }
+
+    &__subtitle {
+        @include poppins(600);
+        font-size: 60px;
+        color: #fff;
+        line-height: 1.3;
+    }
+}
+
+.squares {
+    padding-left: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: column;
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        &-item {
+            margin: 30px;
+            width: 90px;
+            height: 90px;
+            background-color: white;
+            opacity: 0.25;
+        }
+    }
+}
+
