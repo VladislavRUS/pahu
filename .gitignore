@@ -3,3 +3,4 @@ static/scripts/main.js
 static/styles/main.css
 dist
 *.psd
+*.vscode
