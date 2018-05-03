@@ -18,13 +18,18 @@
     }
 
     &__image {
-        width: 420px;
+        width: 349px;
+        opacity: 0;
     }
 
     &__list {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+    }
+
+    &__item {
+        opacity: 0;
     }
 }
 
@@ -76,10 +81,6 @@
         margin-right: 32px;
     }
 
-    &:hover &__icon {
-        transform: rotate(360deg);
-    }
-
     &__info {
         margin-right: 28px;
         display: flex;
@@ -120,7 +121,6 @@
 
     &__icon {
         flex-shrink: 0;
-        transition: transform .5s ease;
         
         &._modern-design {
             width: 68px;

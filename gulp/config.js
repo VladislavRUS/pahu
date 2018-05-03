@@ -3,6 +3,10 @@ module.exports = {
         src: [
             'node_modules/jquery/dist/jquery.min.js',
             'node_modules/animejs/anime.min.js',
+            'node_modules/velocity-animate/velocity.min.js',
+            'node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js',
+            'node_modules/scrollmagic/scrollmagic/uncompressed/plugins/animation.velocity.js',
+            'node_modules/scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js',
             'static/scripts/js/*.js'
         ],
         dest: 'static/scripts',

@@ -99,4 +99,60 @@ $(document).ready(function () {
             });
         }
     });
+
+    var featuresAnimation = anime({
+        targets: '.features__item, .features__image',
+        translateY: -50,
+        opacity: 1,
+        delay: function (el, i, l) {
+            return i * 150;
+        },
+        easing: 'easeInSine',
+        duration: 250
+    });
+
+    var featuresController = new ScrollMagic.Controller();
+
+    new ScrollMagic.Scene({
+        triggerElement: '.features'
+    })
+    .on('enter leave', function(e) {
+        if (e.type === 'enter') {
+            if (featuresAnimation.reversed) featuresAnimation.reverse();
+
+        } else {
+            if (!featuresAnimation.reversed) featuresAnimation.reverse();
+        }
+        
+        featuresAnimation.play();
+    })
+    .addTo(featuresController);
+
+    var shopAnimation = anime({
+        targets: '._item-animation',
+        scale: 0.95,
+        opacity: 1,
+        delay: function (el, i, l) {
+            return i * 150;
+        },
+        duration: 200,
+        easing: 'easeInSine'
+    });
+    
+    var shopController = new ScrollMagic.Controller();
+
+    new ScrollMagic.Scene({
+        triggerElement: '.shop'
+    })
+    .on('enter leave', function(e) {
+        if (e.type === 'enter') {
+            if (shopAnimation.reversed) shopAnimation.reverse();
+
+        } else {
+            if (!shopAnimation.reversed) shopAnimation.reverse();
+        }
+        
+        shopAnimation.play();
+    })
+    .addTo(shopController);
 });
