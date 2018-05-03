@@ -108,7 +108,8 @@ $(document).ready(function () {
             return i * 150;
         },
         easing: 'easeInSine',
-        duration: 250
+        duration: 250,
+        autoplay: false
     });
 
     var featuresController = new ScrollMagic.Controller();
@@ -132,11 +133,12 @@ $(document).ready(function () {
         targets: '._item-animation',
         scale: 0.95,
         opacity: 1,
+        easing: 'easeInSine',
         delay: function (el, i, l) {
             return i * 150;
         },
         duration: 200,
-        easing: 'easeInSine'
+        autoplay: false
     });
     
     var shopController = new ScrollMagic.Controller();
