@@ -131,7 +131,8 @@ $(document).ready(function () {
 
     var shopAnimation = anime({
         targets: '._item-animation',
-        scale: 0.95,
+        translateY: '10px',
+        scale: 0.99,
         opacity: 1,
         easing: 'easeInSine',
         delay: function (el, i, l) {
@@ -157,4 +158,33 @@ $(document).ready(function () {
         shopAnimation.play();
     })
     .addTo(shopController);
+
+    var collectionAnimation = anime({
+        targets: '.collection__list-item',
+        translateY: '10px',
+        opacity: 1,
+        easing: 'easeInSine',
+        delay: function (el, i, l) {
+            return i * 150;
+        },
+        duration: 200,
+        autoplay: false
+    });
+    
+    var collectionController = new ScrollMagic.Controller();
+
+    new ScrollMagic.Scene({
+        triggerElement: '.collection'
+    })
+    .on('enter leave', function(e) {
+        if (e.type === 'enter') {
+            if (collectionAnimation.reversed) collectionAnimation.reverse();
+
+        } else {
+            if (!collectionAnimation.reversed) collectionAnimation.reverse();
+        }
+        
+        collectionAnimation.play();
+    })
+    .addTo(collectionController);
 });
